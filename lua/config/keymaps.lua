@@ -9,6 +9,9 @@ mapkey("<F8>", "NvimTreeToggle", "n")
 -- mapkey("<F6>", "se list!", "n")
 mapkey("<F6>", "IBLToggle", "n")
 
+-- Whitespace
+mapkey("_s", "StripWhitespace", "n")
+
 -- Pane and Window Navigation
 mapkey("<C-h>", "<C-w>h", "n") -- Navigate Left
 mapkey("<C-j>", "<C-w>j", "n") -- Navigate Down
@@ -23,11 +26,11 @@ mapkey("<C-j>", "TmuxNavigateDown", "n") -- Navigate Down
 mapkey("<C-k>", "TmuxNavigateUp", "n") -- Navigate Up
 mapkey("<C-l>", "TmuxNavigateRight", "n") -- Navigate Right
 
-local api = vim.api
-
 -- Indenting
 vim.keymap.set("v", "<", "<gv", { silent = true, noremap = true })
 vim.keymap.set("v", ">", ">gv", { silent = true, noremap = true })
+
+local api = vim.api
 
 -- Commenting
 api.nvim_set_keymap("n", "<C-_>", "gtc", { noremap = false })
