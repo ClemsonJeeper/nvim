@@ -13,7 +13,7 @@ return {
 		},
 	    },
 	})
-	vim.cmd("colorscheme carbonfox")
+	--vim.cmd("colorscheme carbonfox")
 	--vim.cmd("hi Whitespace guifg=#6e6e6e")
     end
 }
