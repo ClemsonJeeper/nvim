@@ -59,5 +59,5 @@ vim.keymap.set("v", ">", ">gv", { silent = true, noremap = true })
 local api = vim.api
 
 -- Commenting
-api.nvim_set_keymap("n", "<C-_>", "gtc", { noremap = false })
-api.nvim_set_keymap("v", "<C-_>", "goc", { noremap = false })
+api.nvim_set_keymap("n", "<C-c>", "gtc", { noremap = false })
+api.nvim_set_keymap("v", "<C-c>", "goc", { noremap = false })

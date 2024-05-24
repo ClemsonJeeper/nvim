@@ -17,8 +17,7 @@ opt.hlsearch = false
 opt.relativenumber = false
 opt.termguicolors = true
 -- opt.colorcolumn = "80"
--- leave left column open or not
--- opt.signcolumn = "no"
+opt.signcolumn = "no"
 opt.cmdheight = 1
 opt.scrolloff = 10
 opt.completeopt = "menuone,noinsert,noselect"

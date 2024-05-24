@@ -1,7 +1,7 @@
 return {
     "lukas-reineke/indent-blankline.nvim",
     main = "ibl",
-    lazy = false,               
+    lazy = false,
     opts = {
 	scope = { enabled = false },
 	indent = {
@@ -12,9 +12,4 @@ return {
 	    remove_blankline_trail = false,
 	},
     },
---[[    opts = {                             
-
-    },]]--
-
-
 }
