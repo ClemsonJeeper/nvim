@@ -21,6 +21,7 @@ opt.signcolumn = "no"
 opt.cmdheight = 1
 opt.scrolloff = 10
 opt.completeopt = "menuone,noinsert,noselect"
+opt.listchars = "tab:!-"
 
 -- Behavior
 opt.hidden = true

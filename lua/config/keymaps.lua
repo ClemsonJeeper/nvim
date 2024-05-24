@@ -9,7 +9,7 @@ mapkey("M-a", "NvimTreeToggle", "n")
 
 -- Various
 -- mapkey("<F6>", "se list!", "n")
-mapkey("<F6>", "IBLToggle", "n")
+mapkey("<F6>", "IBLToggle<CR>:se list!", "n")
 
 -- Whitespace
 mapkey("_s", "StripWhitespace", "n")
