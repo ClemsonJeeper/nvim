@@ -5,10 +5,7 @@ mapkey("<leader>m", "NvimTreeFocus", "n")
 mapkey("<leader>e", "NvimTreeToggle", "n")
 mapkey("<F8>", "NvimTreeToggle", "n")
 
-mapkey("M-a", "NvimTreeToggle", "n")
-
 -- Various
--- mapkey("<F6>", "se list!", "n")
 mapkey("<F6>", "IBLToggle<CR>:se list!", "n")
 
 -- Whitespace
