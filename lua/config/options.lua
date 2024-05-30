@@ -42,9 +42,9 @@ opt.modifiable = true
 opt.encoding = "UTF-8"
 
 -- folds
-opt.foldmethod = "expr"
-opt.foldexpr = "nvim_treesitter#foldexpr()"
-opt.foldlevel = 99
+-- opt.foldmethod = "expr"
+-- opt.foldexpr = "nvim_treesitter#foldexpr()"
+-- opt.foldlevel = 99
 
 -- Some color stuff
 vim.api.nvim_set_hl(0, "NoiceCmdlinePopupBorder", { fg = "#658594", bg = "NONE" })

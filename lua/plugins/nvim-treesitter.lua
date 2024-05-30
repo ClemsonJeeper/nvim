@@ -23,6 +23,9 @@ local config = function()
 	highlight = {
 	    enable = true,
 	    additional_vim_regex_highlighting = true,
+	    disable = function(lang, bufnr)
+		return ((lang == "c" or lang == "cpp") and vim.api.nvim_buf_line_count(bufnr) > 50000)
+	    end,
 	},
 	incremental_selection = {
 	    enable = true,
