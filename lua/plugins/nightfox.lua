@@ -1,6 +1,7 @@
 return {
     "EdenEast/nightfox.nvim",
-    lazy = false,
+    -- lazy = false,
+    priorty = 1000,
     config = function()
 	require("nightfox").setup({
 	    palettes = {

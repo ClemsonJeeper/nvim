@@ -1,7 +1,6 @@
-return {
-    "folke/noice.nvim",
-    event = "VeryLazy",
-    opts = {
+local config = function()
+    local noice = require("noice")
+    noice.setup({
 	routes = {
 	    {
 		view = "notify",
@@ -24,20 +23,27 @@ return {
 	    inc_rename = false, -- enables an input dialog for inc-rename.nvim
 	    lsp_doc_border = false, -- add a border to hover docs and signature help
 	},
-    },
+    })
+    vim.api.nvim_set_hl(0, "NoiceCmdlinePopupBorder", { fg = "#658594", bg = "NONE" })
+end
+
+return {
+    "folke/noice.nvim",
+    event = "VeryLazy",
     dependencies = {
 	-- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
 	"MunifTanjim/nui.nvim",
 	-- OPTIONAL:
 	--   `nvim-notify` is only needed, if you want to use the notification view.
 	--   If not available, we use `mini` as the fallback
-	-- {
-	--     "rcarriga/nvim-notify",
-	--     config = function()
-	-- 	require("notify").setup({
-	-- 	    background_colour = "#000000",
-	-- 	})
-	--     end,
-	-- },
+	{
+	    "rcarriga/nvim-notify",
+	    config = function()
+		require("notify").setup({
+		    background_colour = "#000000",
+		})
+	    end,
+	},
     },
+    config = config,
 }

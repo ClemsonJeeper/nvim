@@ -37,9 +37,12 @@ opt.autochdir = false
 opt.iskeyword:append("-")
 opt.mouse = ""
 --opt.mouse:append("a")
+opt.clipboard = ""
+--opt.clipboard = "unnamed,unnamedplus"
 --opt.clipboard:append("unnamedplus")
 opt.modifiable = true
 opt.encoding = "UTF-8"
+opt.showmode = false
 
 -- folds
 -- opt.foldmethod = "expr"
