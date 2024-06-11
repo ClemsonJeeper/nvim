@@ -5,7 +5,9 @@ opt.tabstop = 8
 opt.shiftwidth = 4
 opt.softtabstop = 4
 opt.smartindent = true
-opt.wrap = false
+opt.autoindent = true
+opt.wrap = true
+opt.expandtab = false
 
 -- Search
 opt.incsearch = true
@@ -19,7 +21,7 @@ opt.termguicolors = true
 -- opt.colorcolumn = "80"
 opt.signcolumn = "no"
 opt.cmdheight = 1
-opt.scrolloff = 10
+opt.scrolloff = 15
 opt.completeopt = "menuone,noinsert,noselect"
 opt.listchars = "tab:!-"
 
