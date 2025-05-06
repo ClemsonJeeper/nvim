@@ -11,19 +11,24 @@ opt.expandtab = false
 
 -- Search
 opt.incsearch = true
-opt.ignorecase = true
+opt.ignorecase = false
 opt.smartcase = true
-opt.hlsearch = false
+opt.hlsearch = true
 
 -- Appearance
 opt.relativenumber = false
+opt.number = false
 opt.termguicolors = true
+
 -- opt.colorcolumn = "80"
 opt.signcolumn = "no"
 opt.cmdheight = 1
 opt.scrolloff = 15
 opt.completeopt = "menuone,noinsert,noselect"
-opt.listchars = "tab:!-"
+
+opt.list = true
+--opt.listchars = { tab = "!-", trail = "·", nbsp = "␣" }
+opt.listchars = { tab = "!-", nbsp = "␣" }
 
 -- Behavior
 opt.hidden = true
@@ -52,4 +57,14 @@ opt.showmode = false
 -- opt.foldlevel = 99
 
 -- Some color stuff
-vim.api.nvim_set_hl(0, "NoiceCmdlinePopupBorder", { fg = "#658594", bg = "NONE" })
+-- vim.api.nvim_set_hl(0, "NoiceCmdlinePopupBorder", { fg = "#658594", bg = "NONE" })
+
+-- Highlight what we yank briefly
+vim.api.nvim_create_autocmd("TextYankPost", {
+    group = vim.api.nvim_create_augroup("YangHighlight", { clear = true }),
+    pattern = "*",
+    callback = function()
+	vim.highlight.on_yank()
+    end,
+    desc = "Highlight yank",
+})

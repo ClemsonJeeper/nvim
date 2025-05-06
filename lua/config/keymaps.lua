@@ -1,12 +1,10 @@
 local mapkey = require("util.keymapper").mapvimkey
 
--- Directory Navigation
-mapkey("<leader>m", "NvimTreeFocus", "n")
-mapkey("<leader>e", "NvimTreeToggle", "n")
-mapkey("<F8>", "NvimTreeToggle", "n")
+mapkey("-", "<cmd>Oil --float<CR>", "n", { desc="Open Directory in Oil" })
 
 -- Various
 mapkey("<F6>", "IBLToggle<CR>:se list!", "n")
+mapkey("<leader>/", "nohlsearch", "n")
 
 -- Whitespace
 mapkey("_s", "StripWhitespace", "n")
@@ -40,14 +38,24 @@ mapkey("<F2>", "TmuxNavigateUp", "n") -- Navigate Up
 mapkey("<F12>", "TmuxNavigateRight", "n") -- Navigate Right
 
 -- Window Management
-mapkey("<leader>|", "vsplit", "n") -- Split Vertically
-mapkey("<leader>sv", "vsplit", "n") -- Split Vertically
-mapkey("<leader>-", "split", "n") -- Split Horizontally
-mapkey("<leader>sh", "split", "n") -- Split Horizontally
+mapkey("<leader>|", "vsplit", "n", { desc = "Split window vertically" })
+mapkey("<leader>sv", "vsplit", "n", { desc = "Split window vertically" })
+mapkey("<leader>-", "split", "n", { desc = "Split window horizontally" })
+mapkey("<leader>sh", "split", "n", { desc = "Split window horizontally" })
 mapkey("<leader><Up>", "resize +2", "n")
 mapkey("<leader><Down>", "resize -2", "n")
 mapkey("<leader><Left>", "vertical resize +2", "n")
 mapkey("<leader><Right>", "vertical resize -2", "n")
+mapkey("<leader>se", "<C-w>=", "n", { desc = "Make splits equal size" })
+mapkey("<leader>sx", "close<CR>", "n", { desc = "Close current split" })
+mapkey("<leader>sc", "close<CR>", "n", { desc = "Close current split" })
+
+-- tab management
+mapkey("<leader>to", "tabnew<CR>", "n", { desc = "Open new tab" })
+mapkey("<leader>tx", "tabclose<CR>", "n", { desc = "Close current tab" })
+mapkey("<leader>tn", "tabn<CR>", "n", { desc = "Go to next tab" })
+mapkey("<leader>tp", "tabp<CR>", "n", { desc = "Go to previous tab" })
+mapkey("<leader>tf", "tabnew %<CR>", "n", { desc = "Open current buffer in new tab" })
 
 -- Indenting
 vim.keymap.set("v", "<", "<gv", { silent = true, noremap = true })
