@@ -26,7 +26,7 @@ opt.cmdheight = 1
 opt.scrolloff = 15
 opt.completeopt = "menuone,noinsert,noselect"
 
-opt.list = true
+opt.list = false
 --opt.listchars = { tab = "!-", trail = "·", nbsp = "␣" }
 opt.listchars = { tab = "!-", nbsp = "␣" }
 
