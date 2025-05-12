@@ -4,7 +4,10 @@ return {
     require("copyright-updater").setup({
       return_cursor = true,
       style = {
-        kind = "advanced",
+        kind = "simple",
+        simple = {
+          force = true,
+        }
       },
       limiters = {
         post_pattern = "Juniper.*",
